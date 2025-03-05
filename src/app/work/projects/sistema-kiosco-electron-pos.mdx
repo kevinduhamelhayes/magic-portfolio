@@ -1,7 +1,7 @@
 ---
-title: "Sistema de Kiosco: Electron-based POS System"
+title: "Sistema de Kiosco: Electron-based POS for Kraken Market"
 publishedAt: "2023-08-15"
-summary: "Development of a cross-platform point-of-sale system using Electron.js, empowering small businesses to manage sales, inventory, and reporting with a user-friendly desktop application."
+summary: "Development of a custom Electron.js point-of-sale system for Kraken Market, a growing retail business with multiple locations, integrating sales, inventory, and business analytics."
 images:
   - "/images/projects/project-01/sistemElectron.jpg"
   - "/images/projects/project-01/sistemElectron2.png"
@@ -9,7 +9,7 @@ images:
   - "/images/projects/project-01/sistemElectron4.png"
 team:
   - name: "Kevin Duhamel Hayes"
-    role: "Full Stack Developer"
+    role: "Co-Founder & Full Stack Developer"
     avatar: "/images/avatar.jpg"
     linkedIn: "https://www.linkedin.com/in/kevin-duhamel-hayes"
 link: "https://github.com/kevinduhamelhayes"
@@ -17,23 +17,26 @@ link: "https://github.com/kevinduhamelhayes"
 
 ## Overview
 
-I developed a complete point-of-sale system using Electron.js to create a cross-platform desktop application for small retail businesses. This project was designed to provide an affordable, user-friendly alternative to expensive commercial POS solutions, with a focus on simplicity and reliability for everyday use in stores, kiosks, and small shops.
+As co-founder of Kraken Market, I developed a complete point-of-sale system using Electron.js to create a cross-platform desktop application for our growing retail business. This project was designed to provide an affordable, user-friendly alternative to expensive commercial POS solutions, with a focus on simplicity and reliability for everyday use across our three physical store locations. The system became a cornerstone of our digital transformation strategy.
 
 ## Key Features
 
-- **Intuitive Sales Interface**: Created a streamlined checkout process with barcode scanning support, quick product lookup, and multiple payment methods.
-- **Inventory Management**: Implemented a complete inventory system with stock tracking, low-stock alerts, and product categorization.
-- **Sales Reporting**: Developed comprehensive reporting features including daily/monthly sales summaries, product performance metrics, and export capabilities to Excel.
-- **Multi-User Support**: Built a role-based access control system allowing different permission levels for owners, managers, and cashiers.
-- **Offline Functionality**: Designed the system to work fully offline with local data storage, syncing when connection is available.
+- **Intuitive Sales Interface**: Created a streamlined checkout process with barcode scanning support, quick product lookup, and multiple payment methods tailored to our specific business workflows.
+- **Integrated Inventory System**: Developed a centralized inventory management system that tracks stock levels across all store locations in real-time, automates reordering processes, and provides analytics for purchasing decisions.
+- **Multi-Location Support**: Built synchronization capabilities that allow seamless operation across our three physical locations with real-time data sharing.
+- **Comprehensive Reporting**: Implemented detailed sales analytics, including daily/monthly summaries, product performance metrics, and export capabilities to Excel for business planning.
+- **Customer Relationship Management**: Created a customer database and loyalty program that tracks purchase history and enables targeted marketing campaigns.
+- **Multi-User Access Control**: Designed a role-based system allowing different permission levels for owners, managers, and cashiers to ensure proper data access.
+- **Offline Functionality**: Engineered the system to work fully offline with local data storage, syncing when connection is available—critical for business continuity.
 
 ## Technologies Used
 
 - **Frontend & Backend**: Electron.js, JavaScript, Node.js
-- **Database**: SQLite for local data storage
+- **Databases**: SQLite for local data storage, PostgreSQL for centralized data, MongoDB for customer analytics
 - **UI Framework**: Bootstrap for responsive interface components
-- **Additional Tools**: Electron-builder for packaging and distribution
-- **Export Functionality**: ExcelJS for report generation
+- **Additional Tools**: Electron-builder for packaging and distribution, ExcelJS for report generation
+- **Integration**: REST APIs connecting various business systems
+- **Deployment**: Docker containers on Linux servers for backend services
 
 ## Technical Implementation
 
@@ -42,20 +45,28 @@ I developed a complete point-of-sale system using Electron.js to create a cross-
 - Created a responsive design that adapts to different screen sizes and orientations
 - Developed custom print functionality for receipts and reports
 - Implemented efficient database queries to handle large product catalogs and sales history
+- Designed and implemented a microservices architecture for backend scalability
+- Created secure API endpoints for various business functionalities
+- Developed automated data synchronization between store locations
 
 ## Challenges and Solutions
 
 1. **Performance Optimization**: Resolved initial performance issues with large datasets by implementing indexed queries and pagination strategies.
-2. **Cross-Platform Consistency**: Ensured consistent behavior across Windows, macOS, and Linux by creating an abstraction layer for platform-specific functionality.
-3. **Secure Data Handling**: Implemented robust data validation and sanitization to prevent common security vulnerabilities.
-4. **Barcode Integration**: Developed custom drivers for various barcode scanner models to ensure seamless integration regardless of hardware.
+2. **Multiple Location Integration**: Solved synchronization challenges between stores with a centralized database and robust conflict resolution system.
+3. **Cross-Platform Consistency**: Ensured consistent behavior across Windows, macOS, and Linux by creating an abstraction layer for platform-specific functionality.
+4. **Employee Training**: Developed comprehensive training materials and conducted hands-on sessions to ensure smooth adoption across all staff levels.
+5. **Legacy System Migration**: Carefully planned and executed data migration from previous systems without disrupting business operations.
+6. **Barcode Integration**: Developed custom drivers for various barcode scanner models to ensure seamless integration regardless of hardware.
 
 ## Business Impact
 
 - Reduced checkout time by approximately 40% compared to previous manual processes
 - Decreased inventory discrepancies by 65% through automated tracking
-- Enabled data-driven business decisions through comprehensive sales analytics
-- Provided an affordable solution accessible to small businesses with limited technology budgets
+- Improved inventory management time by 65% with centralized controls
+- Reduced stockouts by 40% while lowering overall inventory costs
+- Enabled data-driven business decisions through comprehensive analytics
+- Successfully scaled operations from one to three locations without proportional staff increases
+- Provided an affordable solution that eliminated expensive commercial POS licensing costs
 
 ## Key Learnings
 
@@ -63,8 +74,11 @@ This project reinforced the importance of:
 - Designing software with the specific needs of end-users in mind
 - Building systems that are resilient and can operate in environments with unreliable connectivity
 - Creating interfaces that require minimal training for daily operation
-- Balancing feature richness with simplicity and performance
+- Understanding business operations thoroughly before implementing technical solutions
+- Prioritizing user experience for both staff and customers
+- Building flexible systems that can adapt to evolving business needs
+- Balancing technical sophistication with practical usability
 
 ---
 
-This project demonstrates my ability to create end-to-end solutions that solve real business problems, combining front-end and back-end development with practical business knowledge to deliver software that provides tangible benefits to users. 
+This project demonstrates my ability to create end-to-end solutions that solve real business problems, combining front-end and back-end development with practical business knowledge to deliver software that provides tangible benefits. As both co-founder and developer, I was uniquely positioned to understand the business requirements and translate them into effective technical solutions. 
