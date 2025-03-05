@@ -1,4 +1,9 @@
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(date: string | undefined, includeRelative = false) {
+  // If date is undefined, return empty string or current date
+  if (!date) {
+    return "No date";
+  }
+
   const currentDate = new Date();
 
   if (!date.includes("T")) {
