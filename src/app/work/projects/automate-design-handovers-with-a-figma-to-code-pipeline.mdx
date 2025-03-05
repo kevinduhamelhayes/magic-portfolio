@@ -1,44 +1,68 @@
 ---
-title: "Automating Design Handovers with a Figma to Code Pipeline"
-publishedAt: "2024-04-01"
-summary: "Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think."
+title: "Custom Chatbot with Ollama Integration"
+publishedAt: "2024-03-20"
+summary: "Development of a modern interface for interacting with local language models through Ollama, providing a user-friendly way to leverage AI capabilities locally."
 images:
-  - "/images/projects/project-01/cover-02.jpg"
-  - "/images/projects/project-01/image-03.jpg"
+  - "/images/projects/project-01/ollama.jpg"
+  - "/images/projects/project-01/ollama1.jpg"
 team:
-  - name: "John Doe"
-    role: "Software Engineer"
+  - name: "Kevin Duhamel Hayes"
+    role: "Full Stack Developer"
     avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-link: "https://once-ui.com/"
+    linkedIn: "https://www.linkedin.com/in/kevin-duhamel-hayes"
+link: "https://github.com/kevinduhamelhayes"
 ---
 
 ## Overview
 
-In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated workflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
+This project focused on creating a modern, elegant interface for interacting with Ollama, an application that allows running large language models locally. By building a web-based UI with Next.js and integrating it with Ollama's capabilities, I created a user-friendly system that makes advanced AI accessible to users without requiring cloud-based solutions.
 
 ## Key Features
 
-- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
-- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
-- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
-- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
+- **Intuitive Chat Interface**: Built a responsive and user-friendly interface for interacting with language models, complete with message history and model selection.
+- **Local LLM Integration**: Developed a seamless connection to Ollama's API, allowing users to leverage models like Llama3, Mistral, and other open-source LLMs running locally.
+- **Responsive Design**: Created a mobile-friendly interface that works across devices while maintaining consistent performance.
+- **Customization Options**: Implemented theme support, model parameter adjustments, and conversation management features.
+- **Conversation Export**: Added functionality to save and export conversations for reference or sharing.
 
 ## Technologies Used
 
-- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
-- **React and Next.js**: For building the front-end codebase with clean, reusable components.
-- **Styled-Components**: For managing styles dynamically using design tokens.
-- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
+- **Backend**: Node.js for API handling, Python for Ollama integration
+- **Styling**: Shadcn UI components for consistent design
+- **State Management**: React Context API for application state
+- **API Integration**: Custom hooks for real-time communication with Ollama
 
-## Challenges and Learnings
+## Technical Implementation
 
-One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
+- Implemented WebSocket connections for real-time streaming of model responses
+- Created reusable React components for UI elements and message formatting
+- Developed custom hooks for managing API interactions and state
+- Optimized performance for smooth interactions even with long conversations
+- Implemented proper error handling for connection issues or model limitations
 
-## Outcome
+## Challenges and Solutions
 
-The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
+1. **Real-time Response Streaming**: Implemented efficient WebSocket handling to stream model responses character-by-character without UI lag.
+2. **Model Parameter Management**: Created an intuitive interface for adjusting complex model parameters like temperature and top-k sampling.
+3. **Error Handling**: Developed robust error recovery for cases where the local model might become unresponsive or resource constraints occur.
+4. **Cross-device Compatibility**: Ensured consistent performance across desktop and mobile devices despite the resource-intensive nature of local LLM operations.
+
+## Impact and Results
+
+- Created a production-ready interface that makes local AI models accessible to non-technical users
+- Reduced dependency on cloud-based AI services, enhancing privacy and reducing costs
+- Provided a platform for experimentation with different models and parameters
+- Established a foundation for building more specialized AI applications
+
+## Key Learnings
+
+This project reinforced my understanding of:
+- Building real-time web applications with streaming data
+- Integrating modern web frameworks with AI technologies
+- Creating intuitive interfaces for complex technical capabilities
+- Balancing performance with usability in resource-intensive applications
 
 ---
 
-This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.
+This project demonstrates my ability to bridge the gap between advanced AI technologies and user-friendly interfaces, making powerful tools accessible through thoughtful design and implementation.

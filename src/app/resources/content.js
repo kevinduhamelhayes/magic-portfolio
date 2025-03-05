@@ -9,7 +9,7 @@ const person = {
   role: "Full Stack Developer & AI Engineer",
   avatar: "/images/avatar.jpg",
   location: "America/Buenos_Aires", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English (Professional Working)", "Español (Native)", "Portugues (Basic)", "Italiano (Basic)"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English (Professional C1)", "Español (Native)", "Portugues (Basic)", "Italiano (Basic)"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -43,7 +43,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "kevinduhamelh@gmail.com",
+    link: "mailto:kevinduhamelh@gmail.com",
   },
 ];
 
@@ -54,8 +54,7 @@ const home = {
   headline: <>Full Stack Developer & AI Engineer</>,
   subline: (
     <>
-      I'm Kevin, a Full Stack Developer specializing in JavaScript/TypeScript, React, Python, and AI Engineering. 
-      Currently available for new opportunities and projects.
+      I'm Kevin, a Full Stack Developer specializing in JavaScript/TypeScript, React, Python, and AI Engineering. With 3 years of experience in Linux environments and 2+ years in various web technologies, I'm passionate about creating efficient, intelligent solutions. Currently available for new opportunities and projects.
     </>
   ),
 };
@@ -80,9 +79,10 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        As a Full Stack Developer with a strong focus on AI integration, I combine robust technical expertise in JavaScript, 
-        TypeScript, Python, and modern frameworks with a strategic approach to implementing AI solutions. My background in 
-        electrical engineering provides me with a unique perspective on system architecture and process automation.
+        As a Full Stack Developer with a strong focus on AI integration, I combine robust technical expertise in 
+        JavaScript, TypeScript, Python, and modern frameworks with a strategic approach to implementing AI solutions. 
+        With 3 years of experience in Linux environments and 2+ years in various web technologies, I develop 
+        applications ranging from AI-powered systems to desktop POS solutions, e-commerce platforms, and payment processing systems.
       </>
     ),
   },
@@ -93,22 +93,26 @@ const about = {
       {
         company: "Devink",
         timeframe: "2022 - Present",
-        role: "Lead Digital Transformation & Full Stack Developer",
+        role: "Digital Transformation Leader & Full Stack Developer",
         achievements: [
           <>
-            Lead digital transformation initiatives while actively developing software solutions using Python and JavaScript, 
-            focusing on API development and system integration.
+            Leading digital transformation initiatives with a focus on AI integration, implementing modern frameworks and agile methodologies.
           </>,
           <>
-            Implement innovative solutions to enhance operational efficiency and customer experience, leveraging AI and 
-            database technologies for personalized solutions.
+            Developing applications with React, Next.js, TypeScript for frontends and Python (Django, FastAPI) for backends.
+          </>,
+          <>
+            Building and optimizing REST APIs, working with PostgreSQL, MongoDB, and integrating payment systems like Stripe.
+          </>,
+          <>
+            Creating cross-platform desktop applications using Electron.js for POS and business management systems.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/sistemElectron.jpg",
+            alt: "Electron POS System",
             width: 16,
             height: 9,
           },
@@ -116,31 +120,65 @@ const about = {
       },
       {
         company: "Kraken Market",
-        timeframe: "2020 - 2024",
-        role: "Co-Founder & Technical Lead",
+        timeframe: "August 2020 - January 2024",
+        role: "Co-Founder & Operations Manager",
         achievements: [
           <>
-            Co-founded and scaled a family business, managing a team of 14 employees across 3 locations while implementing 
-            technical solutions for business operations.
+            Co-founded and expanded a retail business, leading a team of 14 employees across 3 locations.
           </>,
           <>
-            Applied business management and real-time problem-solving skills, strengthening my ability to deliver practical 
-            technical solutions in fast-paced environments.
+            Developed and implemented custom e-commerce and inventory management solutions.
+          </>,
+          <>
+            Created data analytics systems to optimize product selection and customer engagement.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/Ecommerce.jpg",
+            alt: "Ecommerce Platform",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
-        company: "Prosegur S.A",
-        timeframe: "2015 - 2022",
-        role: "Electrical Systems Specialist",
+        company: "Freelance Developer",
+        timeframe: "2021 - Present",
+        role: "Full Stack & AI Developer",
         achievements: [
           <>
-            Supervised critical security and detection systems, managing technical infrastructure including Data Center 
-            environments.
+            Developed AI-powered applications integrating with LLMs and custom prompt engineering.
           </>,
           <>
-            Specialized in high-technology system maintenance, developing strong troubleshooting and system architecture skills.
+            Created payment processing systems with Stripe integration and advanced analytics.
+          </>,
+          <>
+            Built developer tools like the GitHub Contribution Timestamp Visualizer and advanced ToDo applications.
+          </>,
+        ],
+        images: [
+          {
+            src: "/images/projects/project-01/ollama.jpg",
+            alt: "AI Chatbot Project",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        company: "Electro City Rosario",
+        timeframe: "2010 - Present",
+        role: "Technical Director & Licensed Electrician",
+        achievements: [
+          <>
+            Specialist in electrical installations, renovations, and building maintenance.
+          </>,
+          <>
+            Integrated technological solutions for process automation in industrial and commercial installations.
+          </>,
+          <>
+            Applied engineering knowledge to develop IoT solutions for home and business automation.
           </>,
         ],
         images: [],
@@ -153,11 +191,11 @@ const about = {
     institutions: [
       {
         name: "Professional Development",
-        description: <>40+ certificates from Platzi, extensive training in AI/ML (DeepLearning.AI), and continuous learning through technical challenges and projects.</>,
+        description: <>40+ certificates from Platzi and Udemy, extensive training in AI/ML (DeepLearning.AI), and continuous learning through technical challenges and projects.</>,
       },
       {
         name: "Technical Education",
-        description: <>Technical Degree in Machine Repair and Electromechanical Equipment - Colegio San Jose Rosario</>,
+        description: <>Technician in Machine Repair, Methods, and Electromechanical Equipment - Colegio San Jose Rosario</>,
       },
     ],
   },
@@ -166,20 +204,20 @@ const about = {
     title: "Technical Skills",
     skills: [
       {
-        title: "AI & Automation",
-        description: <>Expert in AI integration using OpenAI APIs, LangChain, and custom prompt engineering. Experienced in developing contextual chatbots and document classification systems.</>,
+        title: "Languages & Frameworks",
+        description: <>JavaScript & TypeScript (React, Next.js, Express, Node.js, Electron.js), Python (Django, FastAPI, Flask, LangChain), CSS (Tailwind, Styled Components), HTML.</>,
       },
       {
-        title: "Frontend Development",
-        description: <>Proficient in React, Next.js, TypeScript, and modern CSS (Tailwind). Skilled in building responsive, user-friendly interfaces with optimal performance.</>,
+        title: "Databases & APIs",
+        description: <>PostgreSQL, MongoDB, Firebase, Prisma ORM, REST API development, GraphQL, Strapi CMS, API integrations (Stripe, GitHub, OAuth).</>,
       },
       {
-        title: "Backend Development",
-        description: <>Strong expertise in Python (Django, FastAPI) and Node.js (Express). Experienced in designing RESTful APIs and implementing AI model integrations.</>,
+        title: "AI & Machine Learning",
+        description: <>LLM integrations (OpenAI, Ollama), custom prompt engineering, AI application development, chatbot creation, document processing systems.</>,
       },
       {
-        title: "DevOps & Tools",
-        description: <>Familiar with Docker, AWS (EC2/S3), and version control systems. Experienced in setting up CI/CD pipelines and managing cloud infrastructure.</>,
+        title: "DevOps & Infrastructure",
+        description: <>Docker, Linux, AWS, Vercel, CI/CD with GitHub Actions, Git version control, serverless functions, performance optimization.</>,
       },
     ],
   },
@@ -196,7 +234,7 @@ const blog = {
 const work = {
   label: "Work",
   title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
+  description: `Full stack development and AI engineering projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
