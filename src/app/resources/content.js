@@ -111,7 +111,7 @@ const about = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/sistemElectron.jpg",
+            src: "/images/projects/electron-kiosco-sistem/sistemElectron.jpg",
             alt: "Electron POS System",
             width: 16,
             height: 9,
@@ -135,7 +135,7 @@ const about = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/Ecommerce.jpg",
+            src: "/images/projects/ecommerce/Ecommerce.jpg",
             alt: "Ecommerce Platform",
             width: 16,
             height: 9,
@@ -159,7 +159,7 @@ const about = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/ollama.jpg",
+            src: "/images/projects/ollama-chatbot/ollama.jpg",
             alt: "AI Chatbot Project",
             width: 16,
             height: 9,
@@ -241,78 +241,68 @@ const work = {
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  title: "My project gallery",
+  description: `A showcase of my development work and projects by ${person.name}`,
+  // Images from projects
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
+      src: "/images/projects/electron-kiosco-sistem/sistemElectron.jpg",
+      alt: "Electron POS System",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
+      src: "/images/projects/ollama-chatbot/ollama.jpg",
+      alt: "Ollama Chatbot Interface",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
+      src: "/images/projects/landyngspages/landingpage-640.jpg",
+      alt: "Modern Landing Page Design",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
+      src: "/images/projects/Compound Interest Calculator/calculator-main.png",
+      alt: "Compound Interest Calculator",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
+      src: "/images/projects/ecommerce/Ecommerce.jpg",
+      alt: "E-commerce Platform",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
+      src: "/images/projects/mygithubcontributions/Githubtimestamp.jpg",
+      alt: "GitHub Contribution Visualizer",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
+      src: "/images/projects/landyngspages/landingpage-641.jpg",
+      alt: "Landing Page Design",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
+      src: "/images/projects/electron-kiosco-sistem/sistemElectron2.png",
+      alt: "POS System Interface",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
+      src: "/images/projects/Compound Interest Calculator/calculator-chart.png",
+      alt: "Financial Growth Chart",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/projects/ecommerce/dashboardStripe.png",
+      alt: "Stripe Payment Dashboard",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/projects/ollama-chatbot/ollama1.jpg",
+      alt: "AI Chatbot Interface",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/projects/landyngspages/landingpage-642.jpg",
+      alt: "Modern Web Design",
       orientation: "horizontal",
     },
   ],
