@@ -34,7 +34,7 @@ export default function StructuredData({
   };
   
   // Additional data based on page type
-  let structuredData = { ...baseStructuredData };
+  let structuredData: any = { ...baseStructuredData };
   
   if (type === 'Person') {
     structuredData = {
