@@ -36,31 +36,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `https://${baseURL}`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 1,
     },
     {
       url: `https://${baseURL}/about`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `https://${baseURL}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
       url: `https://${baseURL}/work`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
       url: `https://${baseURL}/gallery`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
   ];
@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return {
       url: `https://${baseURL}/blog/${post.slug}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.6,
     };
   });
@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return {
       url: `https://${baseURL}/work/${project.slug}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.7,
     };
   });
