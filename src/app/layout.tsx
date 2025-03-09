@@ -15,8 +15,15 @@ import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 export async function generateMetadata() {
   return {
     metadataBase: new URL(`https://${baseURL}`),
-    title: home.title,
+    title: {
+      template: `%s | ${person.name}`,
+      default: home.title,
+    },
     description: home.description,
+    keywords: ['portfolio', 'developer', 'full stack', 'AI engineer', 'JavaScript', 'React', 'Next.js', 'Python'],
+    authors: [{ name: person.name, url: `https://${baseURL}` }],
+    creator: person.name,
+    publisher: person.name,
     icons: {
       icon: [
         { url: '/favicon.ico' },
@@ -31,12 +38,27 @@ export async function generateMetadata() {
     },
     manifest: '/manifest.json',
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
-      url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
+      title: `${person.name}'s Portfolio`,
+      description: home.description,
+      url: `https://${baseURL}`,
+      siteName: `${person.name}'s Portfolio`,
       locale: "en_US",
       type: "website",
+      images: [
+        {
+          url: `https://${baseURL}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `${person.name}'s Portfolio`,
+        }
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${person.name}'s Portfolio`,
+      description: home.description,
+      creator: '@kevinduhamelh',
+      images: [`https://${baseURL}/og-image.jpg`],
     },
     robots: {
       index: true,
@@ -48,6 +70,12 @@ export async function generateMetadata() {
         "max-image-preview": "large",
         "max-snippet": -1,
       },
+    },
+    alternates: {
+      canonical: `https://${baseURL}`,
+    },
+    verification: {
+      google: 'google-site-verification-code', // Replace with your actual verification code
     },
   };
 }

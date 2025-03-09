@@ -1,23 +1,89 @@
-import { getPosts } from "@/app/utils/utils";
-import { baseURL, routes as routesConfig } from "@/app/resources";
+import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { baseURL } from '@/app/resources';
 
-export default async function sitemap() {
-  const blogs = getPosts(["src", "app", "blog", "posts"]).map((post) => ({
-    url: `https://${baseURL}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-  }));
+// Function to get all blog posts
+function getBlogPosts() {
+  const postsDirectory = path.join(process.cwd(), 'src', 'app', 'blog', 'posts');
+  const filenames = fs.readdirSync(postsDirectory);
+  
+  return filenames.map(filename => {
+    return {
+      slug: filename.replace(/\.mdx$/, ''),
+    };
+  });
+}
 
-  const works = getPosts(["src", "app", "work", "projects"]).map((post) => ({
-    url: `https://${baseURL}/work/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-  }));
+// Function to get all work projects
+function getWorkProjects() {
+  const projectsDirectory = path.join(process.cwd(), 'src', 'app', 'work', 'projects');
+  const filenames = fs.readdirSync(projectsDirectory);
+  
+  return filenames.map(filename => {
+    return {
+      slug: filename.replace(/\.mdx$/, ''),
+    };
+  });
+}
 
-  const activeRoutes = Object.keys(routesConfig).filter((route) => routesConfig[route]);
+export default function sitemap(): MetadataRoute.Sitemap {
+  const blogPosts = getBlogPosts();
+  const workProjects = getWorkProjects();
+  
+  // Static routes
+  const routes = [
+    {
+      url: `https://${baseURL}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
+      url: `https://${baseURL}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `https://${baseURL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `https://${baseURL}/work`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `https://${baseURL}/gallery`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ];
 
-  const routes = activeRoutes.map((route) => ({
-    url: `https://${baseURL}${route !== "/" ? route : ""}`,
-    lastModified: new Date().toISOString().split("T")[0],
-  }));
+  // Add blog posts to sitemap
+  const blogRoutes = blogPosts.map(post => {
+    return {
+      url: `https://${baseURL}/blog/${post.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    };
+  });
 
-  return [...routes, ...blogs, ...works];
+  // Add work projects to sitemap
+  const workRoutes = workProjects.map(project => {
+    return {
+      url: `https://${baseURL}/work/${project.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    };
+  });
+
+  return [...routes, ...blogRoutes, ...workRoutes];
 }
